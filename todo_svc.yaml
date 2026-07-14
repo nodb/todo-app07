@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: todo-app07-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: todo-app07
+  ports:
+    - protocol: TCP
+      port: 8062
+      targetPort: 5000
